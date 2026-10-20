@@ -1,0 +1,101 @@
+{
+  "model_name": "Class-balanced logistic regression",
+  "target_column": "Class",
+  "feature_columns": [
+    "Fruit",
+    "Temp",
+    "Humid (%)",
+    "Light (Fux)",
+    "CO2 (pmm)"
+  ],
+  "classes": [
+    "BAD",
+    "Bad",
+    "Good"
+  ],
+  "risk_assessment": {
+    "spoilage_risk_score_available": false,
+    "risk_categories_available": false,
+    "probability_calibration": "not performed",
+    "reason": "The source does not define the meaning of its distinct target labels ('BAD', 'Bad', and 'Good'), so there is no validated mapping from model classes to a spoilage event. Model probabilities are also uncalibrated and are not displayed as risk.",
+    "feature_contributions_or_recommendations_available": false,
+    "feature_explanation_reason": "The fitted classifier and observational dataset do not establish causal factor contributions or validated handling recommendations.",
+    "measurement_units": "not documented in the source CSV"
+  },
+  "split": {
+    "method": "stratified random holdout",
+    "test_fraction": 0.2,
+    "random_seed": 42,
+    "rows_before_exact_deduplication": 10995,
+    "exact_duplicate_rows_removed_before_split": 2880,
+    "rows_after_exact_deduplication": 8115,
+    "train_rows": 6492,
+    "test_rows": 1623
+  },
+  "metrics": {
+    "accuracy": 0.9593345656192237,
+    "precision_macro": 0.9381699548649718,
+    "recall_macro": 0.9742264963419046,
+    "f1_macro": 0.954778720249339,
+    "precision_weighted": 0.9611981583982872,
+    "recall_weighted": 0.9593345656192237,
+    "f1_weighted": 0.9594634287576904
+  },
+  "confusion_matrix": {
+    "labels": [
+      "BAD",
+      "Bad",
+      "Good"
+    ],
+    "values": [
+      [
+        86,
+        0,
+        0
+      ],
+      [
+        0,
+        613,
+        10
+      ],
+      [
+        10,
+        46,
+        858
+      ]
+    ]
+  },
+  "classification_report": {
+    "BAD": {
+      "precision": 0.8958333333333334,
+      "recall": 1.0,
+      "f1-score": 0.945054945054945,
+      "support": 86.0
+    },
+    "Bad": {
+      "precision": 0.9301972685887708,
+      "recall": 0.9839486356340289,
+      "f1-score": 0.9563182527301092,
+      "support": 623.0
+    },
+    "Good": {
+      "precision": 0.988479262672811,
+      "recall": 0.9387308533916849,
+      "f1-score": 0.9629629629629629,
+      "support": 914.0
+    },
+    "accuracy": 0.9593345656192237,
+    "macro avg": {
+      "precision": 0.9381699548649718,
+      "recall": 0.9742264963419046,
+      "f1-score": 0.954778720249339,
+      "support": 1623.0
+    },
+    "weighted avg": {
+      "precision": 0.9611981583982872,
+      "recall": 0.9593345656192237,
+      "f1-score": 0.9594634287576904,
+      "support": 1623.0
+    }
+  }
+}

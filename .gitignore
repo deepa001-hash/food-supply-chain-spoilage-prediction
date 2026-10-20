@@ -1,0 +1,54 @@
+# Byte-compiled / optimised / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# IDE / editor settings
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Secrets
+.env
+.env.*
+!.env.example
+secrets.toml
+.streamlit/secrets.toml
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore generated artifacts except the saved runtime models and evaluation reports.
+models/image_model/*
+models/condition_model/*
+!models/image_model/.gitkeep
+!models/condition_model/.gitkeep
+!models/image_model/image_model.joblib
+!models/image_model/evaluation_results.json
+!models/condition_model/condition_model.joblib
+!models/condition_model/evaluation_results.json
+
+# Data files (add your own data – do not commit large datasets)
+data/images/
+data/condition_data/Dataset.csv
+!data/**/.gitkeep
+!data/condition_data/Dataset.csv
+
+# Deployment does not need the local image-training corpus or its inventory dump.
+Untitled-1.txt
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
